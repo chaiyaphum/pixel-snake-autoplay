@@ -1,0 +1,40 @@
+{
+  "name": "pixel-snake-autoplay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tested Snake path planner, canvas controller, and deterministic simulation toolkit.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./core": "./src/core/cycle-planner.js",
+    "./simulation": "./src/simulation/index.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "coverage": "node --test --test-skip-pattern='one hundred deterministic seeds' --experimental-test-coverage --test-coverage-include='src/**/*.js' --test-coverage-lines=95 --test-coverage-branches=90 --test-coverage-functions=95",
+    "build": "node scripts/build.js",
+    "simulate": "node scripts/simulate.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:secrets": "node scripts/check-secrets.js",
+    "check": "npm run lint && npm run format:check && npm test && npm run coverage && npm run build && npm run check:secrets"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "eslint": "10.15.0",
+    "prettier": "3.10.1"
+  }
+}

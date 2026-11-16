@@ -1,0 +1,13 @@
+Pixel Snake Autoplay
+
+This repository contains an independent controller and its supporting
+documentation. It is not affiliated with or endorsed by the operator of the
+third-party game it can control.
+
+The game's source code, artwork, sound, trademarks, service, and account data
+are not included in this repository. Their respective owners retain all
+rights. The repository's MIT license applies to its original code and
+documentation and does not grant rights to the game or its assets.
+
+Development tools and their dependencies are distributed under their own
+licenses. Refer to the installed packages and lockfile for dependency details.
